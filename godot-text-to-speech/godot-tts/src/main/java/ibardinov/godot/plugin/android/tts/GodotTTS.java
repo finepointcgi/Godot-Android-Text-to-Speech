@@ -10,6 +10,7 @@ import androidx.collection.ArraySet;
 import org.godotengine.godot.Godot;
 import org.godotengine.godot.plugin.GodotPlugin;
 import org.godotengine.godot.plugin.SignalInfo;
+import org.godotengine.godot.plugin.UsedByGodot;
 
 import java.util.Arrays;
 import java.util.List;
@@ -52,6 +53,7 @@ public class GodotTTS extends GodotPlugin {
      * Init TTS
      *
      */
+    @UsedByGodot
     public void setLanguage(String lang, String country) {
         if (textToSpeech != null)
             return;
@@ -82,6 +84,7 @@ public class GodotTTS extends GodotPlugin {
      * Is language available, returns Constants
      *
      */
+    @UsedByGodot
     public int isLanguageAvailable(String lang, String country) {
         if (textToSpeech == null)
             return TextToSpeech.ERROR;
@@ -93,6 +96,7 @@ public class GodotTTS extends GodotPlugin {
      * Translate text to speech
      *
      */
+    @UsedByGodot
     public void speak(String text) {
         if (textToSpeech == null)
             return;
@@ -107,6 +111,7 @@ public class GodotTTS extends GodotPlugin {
      * Checks whether the TTS engine is busy speaking
      *
      */
+    @UsedByGodot
     public boolean isSpeaking() {
         if(textToSpeech == null)
             return false;
@@ -118,6 +123,7 @@ public class GodotTTS extends GodotPlugin {
      * Sets the speech pitch for the TextToSpeech engine
      *
      */
+    @UsedByGodot
     public int setPitch(float pitch) {
         if(textToSpeech == null)
             return textToSpeech.ERROR;
@@ -129,6 +135,7 @@ public class GodotTTS extends GodotPlugin {
      * Sets the speech rate
      *
      */
+    @UsedByGodot
     public int setSpeechRate(float speechRate) {
         if(textToSpeech == null)
             return textToSpeech.ERROR;

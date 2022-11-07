@@ -6,11 +6,11 @@ ext.pluginVersionCode = 1
 ext.pluginVersionName = "1.1.0"
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 32
 
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 31
+        minSdkVersion 18
+        targetSdkVersion 32
         versionCode pluginVersionCode
         versionName pluginVersionName
 
@@ -32,7 +32,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'io.github.m4gr3d:godot:3.5.1.stable'
 
     implementation "androidx.legacy:legacy-support-v4:1.0.0"
 
